@@ -1,0 +1,44 @@
+:root {
+  --ink: #10141c;
+  --panel: #171d29;
+  --panel-raised: #1e2635;
+  --line: #2a3346;
+  --text: #e7ebf3;
+  --text-dim: #8a93a8;
+  --signal: #f2a93b;   /* amber — the "scanner" accent */
+  --good: #4fd1a5;
+  --bad: #ef6a6a;
+  --mono: "IBM Plex Mono", monospace;
+  --display: "Space Grotesk", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--display);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  background-attachment: fixed;
+  background-color: var(--ink);
+}
+
+#root { min-height: 100vh; }
+
+a { color: inherit; }
+
+button {
+  font-family: var(--display);
+  cursor: pointer;
+}
+
+::selection { background: var(--signal); color: #1a1200; }
